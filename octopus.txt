@@ -13,9 +13,9 @@ OCTOPUS KEYBINDINGS REFERENCE                            *octopus-mappings*
 ==============================================================================
 2. FILE OPERATIONS                                       *maps-files*
 
-<leader>S       Save current buffer
-<leader>SS      Save all open buffers (:wa)
-<leader>SA      Open Telescope "Save As" dialog to rename/save
+<leader>s       Save current buffer
+<leader>ss      Save all open buffers (:wa)
+<leader>sa      Open Telescope "Save As" dialog to rename/save
 
 ==============================================================================
 3. WINDOWS & NAVIGATION                                  *maps-windows*
@@ -40,6 +40,7 @@ BUFFERS:
 <leader>bd      Delete current buffer
 <leader>bD      Delete current buffer (force, discarding changes)
 <leader>bq      Close current window/buffer
+<leader>n       New (empty) buffer
 
 TABS:
 <leader>tn      Next tab
@@ -93,8 +94,8 @@ TERMINAL (term)
 
 8. SESSION CONTROL                                      *maps-sessions
 
-<leader>P       Preserve (save) session as
-<leader>L       Load session from file
+<leader>SS      Save session
+<leader>LS      Load saved session
 
  vim:tw=78:ts=8:ft=help:norl:
 

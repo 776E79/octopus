@@ -13,10 +13,9 @@ map('n', '<leader>QQ', ':qa!<CR>', { desc = 'Force quit all' })
 map({'n', 'v'}, '<leader>/', ':Commentary<CR>', { desc = 'Toggle comment' })
 
 -- File operations
-map('n', '<leader>S', '<cmd>w<cr>', { desc = 'Save current buffer' })
-map('n', '<leader>SS', '<cmd>wa<cr>', { desc = 'Save all buffers' })
-map('n', '<leader>SA', files.save_as, { desc = 'Save buffer as...' })
-map('n', '<leader>N', '<cmd>enew<cr>', { desc = 'New empty buffer' })
+map('n', '<leader>s', '<cmd>w<cr>', { desc = 'Save current buffer' })
+map('n', '<leader>ss', '<cmd>wa<cr>', { desc = 'save all buffers' })
+map('n', '<leader>sa', files.save_as, { desc = 'Save buffer as...' })
 
 -- Splits
 map('n', '<leader>vs', ':vsplit<CR>', { desc = 'Vertical split' })
@@ -36,6 +35,7 @@ map('n', '<leader>bp', ':bprev<CR>', { desc = 'Previous buffer' })
 map('n', '<leader>bd', buffer_utils.smart_delete, { desc = 'Close current buffer' })
 map('n', '<leader>bD', buffer_utils.smart_delete_force, { desc = 'Close current buffer' })
 map('n', '<leader>bq', ':q<CR>', { desc = 'Close window/buffer' })
+map('n', '<leader>n', '<cmd>enew<cr>', { desc = 'New empty buffer' })
 
 -- Tabs
 map('n', '<leader>tn', ':tabnext<CR>', { desc = 'Next tab' })
@@ -88,6 +88,6 @@ map('n', '<leader>Tt', ':tabnew | term<CR>', { desc = 'Tab terminal' })
 map('t', '<C-n>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous window' })
 
 -- Session control (preserve/load)
-map('n', '<leader>P', session_utils.save_session_as, { desc = "Save Session" })
-map('n', '<leader>L', session_utils.load_session, { desc = "Load Session" })
+map('n', '<leader>SS', session_utils.save_session_as, { desc = "Save Session" })
+map('n', '<leader>LS', session_utils.load_session, { desc = "Load Session" })
 

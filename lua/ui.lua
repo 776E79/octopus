@@ -12,6 +12,7 @@ require('telescope').setup({
       "--hidden",          -- Search hidden files
       "--glob", "!.git/*"  -- But ignore everything inside the .git folder
     },
+    initial_mode = 'normal',
   },
   pickers = {
     find_files = {

@@ -4,7 +4,6 @@ vim.cmd.colorscheme("catppuccin-frappe")
 
 require('Comment').setup({})
 require("ibl").setup()
-require("neogit").setup({})
 
 require('grug-far').setup({
     icons = { enabled = false },
@@ -30,13 +29,6 @@ require('blink.cmp').setup({
         list = { selection = { preselect = false } },
     },
     sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
-})
-
--- Terminal
-require("toggleterm").setup({
-    start_in_insert = true,
-    persist_size    = true,
-    close_on_exit   = true,
 })
 
 -- File Tree

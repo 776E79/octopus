@@ -81,16 +81,8 @@ map('n', '<leader>gd', ':DiffviewOpen HEAD -- %<cr>', { desc = 'Diff current buf
 map('n', '<leader>R', runner.run_script, { desc = "Run script" })
 map('n', '<leader>RW', runner.run_script_workspace, { desc = "Run workspace script" })
 
--- ToggleTerm
-vim.g.toggleterm_next_id = 1
-local function toggle_with_id(dir, size)
-    vim.cmd(string.format('ToggleTerm %d direction=%s size=%d', vim.g.toggleterm_next_id, dir, size))
-    vim.g.toggleterm_next_id = vim.g.toggleterm_next_id + 1
-end
-
-map('n', '<leader>ht', function() toggle_with_id('horizontal', 20) end, { desc = 'Horizontal terminal' })
-map('n', '<leader>vt', function() toggle_with_id('vertical', 100) end, { desc = 'Vertical terminal' })
-map('n', '<leader>ct', function() toggle_with_id('float', 0) end, { desc = 'Float terminal' })
-map('n', '<leader>Tt', function() toggle_with_id('tab', 0) end, { desc = 'Tab terminal' })
+map('n', '<leader>ht', ':split | term<CR>', { desc = 'Horizontal terminal' })
+map('n', '<leader>vt', ':vsplit | term<CR>', { desc = 'Vertical terminal' })
+map('n', '<leader>Tt', ':tabnew | term<CR>', { desc = 'Tab terminal' })
 map('t', '<C-n>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous window' })
 

@@ -26,3 +26,6 @@ else
     print("Octopus: Headless mode detected. Skipping plugin-dependent modules.\n")
 end
 
+-- Session management options (save everything)
+vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
+

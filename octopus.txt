@@ -84,7 +84,7 @@ RUNNERS:
 <leader>R       Run an executable (script) from current directory
 <leader>RW      Run an executable (script) from ./.workspace
 
-TERMINAL (ToggleTerm):
+TERMINAL (term)
 <leader>ht      Open new horizontal terminal
 <leader>vt      Open new vertical terminal
 <leader>Tt      Open new tab terminal

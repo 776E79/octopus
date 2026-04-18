@@ -22,16 +22,14 @@ Plug 'tpope/vim-commentary'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'MagicDuck/grug-far.nvim'
 Plug 'williamboman/mason.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug('saghen/blink.cmp', { ['tag'] = 'v1.*' })
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'szw/vim-maximizer'
-Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug 'sindrets/diffview.nvim'
-Plug 'TimUntersberger/neogit'
 Plug('NeogitOrg/neogit')
 
 vim.call('plug#end')

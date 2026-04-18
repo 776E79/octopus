@@ -36,7 +36,7 @@ function _G.tabutils.get_tab_name(tab)
             return "Git Status"
         elseif ft == "DiffviewFiles" then
             return "Diffview"
-        elseif ft == "toggleterm" then
+        elseif ft == "term" then
             return "Terminal"
         end
     end

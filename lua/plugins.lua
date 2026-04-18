@@ -28,7 +28,7 @@ Plug('saghen/blink.cmp', { ['tag'] = 'v1.*' })
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'szw/vim-maximizer'
 Plug 'nvim-telescope/telescope.nvim'
-Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
+Plug 'EdenEast/nightfox.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug('NeogitOrg/neogit')
 

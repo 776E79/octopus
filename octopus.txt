@@ -95,7 +95,7 @@ TERMINAL (term)
 8. SESSION CONTROL                                      *maps-sessions
 
 <leader>SS      Save session
-<leader>LS      Load saved session
+<leader>SL      Load saved session
 
  vim:tw=78:ts=8:ft=help:norl:
 

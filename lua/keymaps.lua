@@ -22,13 +22,13 @@ map('n', '<leader>N', '<cmd>enew<cr>', { desc = 'New empty buffer' })
 map('n', '<leader>vs', ':vsplit<CR>', { desc = 'Vertical split' })
 map('n', '<leader>hs', ':split<CR>', { desc = 'Horizontal split' })
 map('n', '<leader>M', ':MaximizerToggle<CR>', { desc = 'Maximize window' })
-map('n', '<leader>w=', '<C-w>=', { desc = 'Equally size windows' })
 
 -- Resizing
 map('n', '<leader>h+', ':vertical resize +4<CR>', { desc = 'Increase width' })
 map('n', '<leader>h-', ':vertical resize -4<CR>', { desc = 'Decrease width' })
 map('n', '<leader>v+', ':resize +4<CR>', { desc = 'Increase height' })
 map('n', '<leader>v-', ':resize -4<CR>', { desc = 'Decrease height' })
+map('n', '<leader>w=', '<C-w>=', { desc = 'Equally size windows' })
 
 -- Buffers
 map('n', '<leader>bn', ':bnext<CR>', { desc = 'Next buffer' })

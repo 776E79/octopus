@@ -23,13 +23,13 @@ OCTOPUS KEYBINDINGS REFERENCE                            *octopus-mappings*
 <leader>vs      Vertical split
 <leader>hs      Horizontal split
 <leader>M       Toggle window maximization
-<leader>w=      Make all windows equal size
 
 RESIZING:
 <leader>h+      Increase window width (+4)
 <leader>h-      Decrease window width (-4)
 <leader>v+      Increase window height (+4)
 <leader>v-      Decrease window height (-4)
+<leader>w=      Make all windows equal size
 
 ==============================================================================
 4. BUFFERS & TABS                                        *maps-buffers-tabs*

@@ -28,5 +28,5 @@ else
 end
 
 -- Session management options (save everything)
-vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions,terminal"
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 

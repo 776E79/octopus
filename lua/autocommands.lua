@@ -22,38 +22,7 @@ autocmd("BufWritePre", {
 })
 
 -- Session Management
-local session_file = vim.fn.getcwd() .. "/.workspace/workspace.nvim"
-
-autocmd("VimEnter", {
-    callback = function()
-        -- Check if there are no arguments and the session file is readable
-        if vim.fn.argc() == 0 and vim.fn.filereadable(session_file) == 1 then
-            -- Source the session file to restore session
-            vim.cmd("source " .. vim.fn.fnameescape(session_file))
-
-            -- Detect filetype for all buffers, not just visible ones
-            local processed_bufs = {}
-
-            -- List all buffers
-            for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
-                if vim.api.nvim_buf_is_valid(bufnr) and not processed_bufs[bufnr] then
-                    -- Switch to the buffer context and trigger filetype detection
-                    vim.api.nvim_buf_call(bufnr, function()
-                        vim.cmd("filetype detect")
-                    end)
-                    processed_bufs[bufnr] = true
-                end
-            end
-
-            -- Optionally, open NvimTree if it's available
-            local ok, nvim_tree = pcall(require, "nvim-tree.api")
-            if ok then
-                nvim_tree.tree.open()
-                vim.cmd("wincmd p")
-            end
-        end
-    end,
-})
+local session_file = vim.fn.getcwd() .. "/.workspace/last_session.vim"
 
 autocmd("VimLeavePre", {
     callback = function()

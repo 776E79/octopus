@@ -4,6 +4,7 @@ local palette = require('telescope_palette')
 local t_diff = require('telescope_diff')
 local runner = require("run_utils")
 local buffer_utils = require("buffer_utils")
+local session_utils = require('session_utils')
 
 -- Essentials and system
 map('n', '<Esc>', ':nohlsearch<CR>', { desc = 'Clear search highlights' })
@@ -85,4 +86,8 @@ map('n', '<leader>ht', ':split | term<CR>', { desc = 'Horizontal terminal' })
 map('n', '<leader>vt', ':vsplit | term<CR>', { desc = 'Vertical terminal' })
 map('n', '<leader>Tt', ':tabnew | term<CR>', { desc = 'Tab terminal' })
 map('t', '<C-n>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous window' })
+
+-- Session control (preserve/load)
+map('n', '<leader>P', session_utils.save_session_as, { desc = "Save Session" })
+map('n', '<leader>L', session_utils.load_session, { desc = "Load Session" })
 

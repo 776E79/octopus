@@ -13,6 +13,7 @@ if not is_headless then
     require('tab_utils')
     require('run_utils')
     require('file_utils')
+    require('session_utils')
     require('buffer_utils')
     require('telescope_diff')
     require('telescope_palette')
@@ -27,5 +28,5 @@ else
 end
 
 -- Session management options (save everything)
-vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
+vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions,terminal"
 

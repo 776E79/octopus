@@ -1,0 +1,94 @@
+*octopus.txt* For Neovim 0.10+                 Last change: 2026 April
+
+OCTOPUS KEYBINDINGS REFERENCE                            *octopus-mappings*
+
+==============================================================================
+1. ESSENTIALS                                            *maps-essentials*
+
+<Esc>           Clear search highlights (:nohlsearch)
+<leader>q       Quit all buffers and exit
+<leader>QQ      Force quit all (ignore unsaved changes)
+<leader>/       Toggle commentary on current line or selection
+
+==============================================================================
+2. FILE OPERATIONS                                       *maps-files*
+
+<leader>S       Save current buffer
+<leader>SS      Save all open buffers (:wa)
+<leader>SA      Open Telescope "Save As" dialog to rename/save
+
+==============================================================================
+3. WINDOWS & NAVIGATION                                  *maps-windows*
+
+<leader>vs      Vertical split
+<leader>hs      Horizontal split
+<leader>M       Toggle window maximization
+<leader>w=      Make all windows equal size
+
+RESIZING:
+<leader>h+      Increase window width (+4)
+<leader>h-      Decrease window width (-4)
+<leader>v+      Increase window height (+4)
+<leader>v-      Decrease window height (-4)
+
+==============================================================================
+4. BUFFERS & TABS                                        *maps-buffers-tabs*
+
+BUFFERS:
+<leader>bn      Next buffer
+<leader>bp      Previous buffer
+<leader>bd      Delete current buffer
+<leader>bD      Delete current buffer (force, discarding changes)
+<leader>bq      Close current window/buffer
+
+TABS:
+<leader>tn      Next tab
+<leader>tp      Previous tab
+<leader>td      Close current tab
+<leader>tc      Create a new named tab (Telescope)
+<leader>tl      List and switch between tabs
+<leader>tr      Rename the current tab
+
+==============================================================================
+5. TELESCOPE & SEARCH                                    *maps-search*
+
+<leader>:       Open Command Palette (Populates cmdline)
+<leader>;       Open Command History (Populates cmdline)
+<leader>p       Open Telescope Builtin Palette
+<leader>fl      Find files in project
+<leader>bl      List open buffers
+<leader>$       Live grep (search text across files)
+<leader>sr      Open GrugFar (Search and Replace tool)
+<leader>m       Search Man Pages (Sections 1, 2, 3)
+
+==============================================================================
+6. LSP & CODE INTELLIGENCE                               *maps-lsp*
+
+gd              Go to definition
+gD              Go to declaration
+gr              List references in Telescope
+gh              Show hover information
+K               Show diagnostic float (non-focusable)
+<leader>=       Format current buffer
+<leader>@       List symbols in current document
+<leader>#       List symbols in workspace
+
+==============================================================================
+7. TOOLS & TERMINAL                                      *maps-tools*
+
+DIFFING:
+<leader>db      Sequential diff of open buffers
+<leader>df      Sequential diff of specific files
+
+RUNNERS:
+<leader>R       Run an executable (script) from current directory
+<leader>RW      Run an executable (script) from ./.workspace
+
+TERMINAL (ToggleTerm):
+<leader>ht      Open new horizontal terminal
+<leader>vt      Open new vertical terminal
+<leader>ct      Open new floating terminal
+<C-n>           (Terminal Mode) Escape to last window
+
+ vim:tw=78:ts=8:ft=help:norl:
+

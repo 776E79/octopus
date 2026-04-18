@@ -1,0 +1,57 @@
+# Neovim / Vim Runtime Data
+*.swp
+*.swo
+*.swn
+*.bak
+*~
+.netrwhist
+undo/
+shada/
+session/
+tags
+.resession/
+
+# Plugin Manager Data
+plugged/
+packer_compiled.lua
+.packer_plugins.lua
+lazy-lock.json.bak
+lazy-report.json
+
+# Lua & Tooling Specific
+.luarc.json
+.lua-lsp/
+.library/
+luac.out
+lua_modules/
+.rocks/
+*.rockspec
+hererocks/
+
+# Logs & Debugging
+*.log
+.lsp.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python / Environment Stuff
+__pycache__/
+.venv/
+env/
+venv/
+*.pyc
+
+# OS / IDE Specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.project
+.settings/
+
+# Local Secrets / Development
+.env
+.env.local
+lua/custom/local_config.lua
+

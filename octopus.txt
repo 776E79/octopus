@@ -87,6 +87,7 @@ RUNNERS:
 TERMINAL (ToggleTerm):
 <leader>ht      Open new horizontal terminal
 <leader>vt      Open new vertical terminal
+<leader>Tt      Open new tab terminal
 <leader>ct      Open new floating terminal
 <C-n>           (Terminal Mode) Escape to last window
 

@@ -91,5 +91,6 @@ end
 map('n', '<leader>ht', function() toggle_with_id('horizontal', 20) end, { desc = 'Horizontal terminal' })
 map('n', '<leader>vt', function() toggle_with_id('vertical', 100) end, { desc = 'Vertical terminal' })
 map('n', '<leader>ct', function() toggle_with_id('float', 0) end, { desc = 'Float terminal' })
+map('n', '<leader>Tt', function() toggle_with_id('tab', 0) end, { desc = 'Tab terminal' })
 map('t', '<C-n>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous window' })
 

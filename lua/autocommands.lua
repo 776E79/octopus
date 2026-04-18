@@ -31,14 +31,12 @@ autocmd("VimEnter", {
             -- Source the session file to restore session
             vim.cmd("source " .. vim.fn.fnameescape(session_file))
 
-            -- Detect filetype for all visible buffers
-            local wins = vim.api.nvim_tabpage_list_wins(0)
+            -- Detect filetype for all buffers, not just visible ones
             local processed_bufs = {}
 
-            for _, win in ipairs(wins) do
-                local bufnr = vim.api.nvim_win_get_buf(win)
-
-                if not processed_bufs[bufnr] then
+            -- List all buffers
+            for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+                if vim.api.nvim_buf_is_valid(bufnr) and not processed_bufs[bufnr] then
                     -- Switch to the buffer context and trigger filetype detection
                     vim.api.nvim_buf_call(bufnr, function()
                         vim.cmd("filetype detect")

@@ -89,6 +89,5 @@ map('t', '<C-n>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous wi
 
 -- Session control (preserve/load)
 map('n', '<leader>SS', session_utils.save_session_as, { desc = "Save Session" })
-    { 
 map('n', '<leader>SL', session_utils.load_session, { desc = "Load Session" })
 

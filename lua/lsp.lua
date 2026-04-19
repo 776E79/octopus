@@ -3,8 +3,13 @@ require('Comment').setup({})
 require("ibl").setup()
 
 vim.lsp.config('clangd', {
-    cmd = { 'clangd', '--background-index' },
-    capabilities = vim.lsp.protocol.make_client_capabilities(),
+  cmd = { 
+    'clangd', 
+    '--background-index', 
+    '--header-insertion=never' 
+  },
+  -- This is the equivalent of root_dir
+  root_markers = { '.clangd', 'compile_commands.json', 'Makefile', '.git' },
 })
 
 vim.lsp.enable('clangd')

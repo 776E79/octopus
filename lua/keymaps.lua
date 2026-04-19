@@ -17,10 +17,14 @@ map('n', '<leader>s', '<cmd>w<cr>', { desc = 'Save current buffer' })
 map('n', '<leader>ss', '<cmd>wa<cr>', { desc = 'save all buffers' })
 map('n', '<leader>sa', files.save_as, { desc = 'Save buffer as...' })
 
--- Splits
+-- Splits and windowing
 map('n', '<leader>vs', ':vsplit<CR>', { desc = 'Vertical split' })
 map('n', '<leader>hs', ':split<CR>', { desc = 'Horizontal split' })
 map('n', '<leader>M', ':MaximizerToggle<CR>', { desc = 'Maximize window' })
+map('n', '<leader>wl', '<C-w>l', { desc = 'Move to window on the right' })
+map('n', '<leader>wh', '<C-w>h', { desc = 'Move to window on the left' })
+map('n', '<leader>wk', '<C-w>k', { desc = 'Move to window above' })
+map('n', '<leader>wj', '<C-w>j', { desc = 'Move to window below' })
 
 -- Resizing
 map('n', '<leader>h+', ':vertical resize +4<CR>', { desc = 'Increase width' })

@@ -23,6 +23,10 @@ OCTOPUS KEYBINDINGS REFERENCE                            *octopus-mappings*
 <leader>vs      Vertical split
 <leader>hs      Horizontal split
 <leader>M       Toggle window maximization
+<leader>wl      Move to the window on the right
+<leader>wh      Move to the window on the left
+<leader>wk      Move to the window above
+<leader>wj      Move to the window below
 
 RESIZING:
 <leader>h+      Increase window width (+4)

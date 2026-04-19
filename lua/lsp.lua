@@ -6,7 +6,8 @@ vim.lsp.config('clangd', {
   cmd = { 
     'clangd', 
     '--background-index', 
-    '--header-insertion=never' 
+    '--header-insertion=never' ,
+    '--log=verbose',
   },
   -- This is the equivalent of root_dir
   root_markers = { '.clangd', 'compile_commands.json', 'Makefile', '.git' },

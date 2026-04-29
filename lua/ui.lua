@@ -101,6 +101,26 @@ local border_fg = "#ADB5BD"
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "jb",
     callback = function()
+        -- Bold Types (The classic Eclipse look)
+        vim.api.nvim_set_hl(0, "Type", { fg = "#000000", bold = true })
+        vim.api.nvim_set_hl(0, "@type", { fg = "#000000", bold = true })
+        vim.api.nvim_set_hl(0, "@type.builtin", { fg = "#000000", bold = true })
+
+        -- Keywords (Eclipse uses a specific purple/magenta)
+        vim.api.nvim_set_hl(0, "Keyword", { fg = "#7f0055", bold = true })
+        vim.api.nvim_set_hl(0, "@keyword", { fg = "#7f0055", bold = true })
+
+        -- Strings (Eclipse blue/navy)
+        vim.api.nvim_set_hl(0, "String", { fg = "#2a00ff" })
+        vim.api.nvim_set_hl(0, "@string", { fg = "#2a00ff" })
+
+        -- Comments (Eclipse classic green)
+        vim.api.nvim_set_hl(0, "Comment", { fg = "#3f7f5f", italic = false })
+        vim.api.nvim_set_hl(0, "@comment", { fg = "#3f7f5f", italic = false })
+
+        -- Javadoc Style (Light blue/grey)
+        vim.api.nvim_set_hl(0, "@comment.documentation", { fg = "#3f5fbf" })
+
         -- Editor and gutter
         vim.api.nvim_set_hl(0, "Normal", { bg = main_bg, force = true })
         vim.api.nvim_set_hl(0, "NormalNC", { bg = main_bg, force = true })
@@ -145,6 +165,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "NvimTreeFolderArrowClosed", { fg = "#ADB5BD" })
         vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = "#424242" })
         vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#5E81AC", bold = true })
+        vim.api.nvim_set_hl(0, "NvimTreeWindowPicker", { fg = "#FFFFFF", bg = "#5E81AC", bold = true })
 
         -- Ruler (see VirtColumn above)
         vim.api.nvim_set_hl(0, "VirtColumn", { fg = "#C29393", bg = main_bg, force = true })

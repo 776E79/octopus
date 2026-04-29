@@ -224,6 +224,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+-- Padding between gutter and main text
+vim.opt.statuscolumn = "%s%l %C"
+vim.opt.signcolumn = "yes:1"
+vim.opt.foldcolumn = "1"
+
 require("ibl").setup {
     indent = {
         char = "│",

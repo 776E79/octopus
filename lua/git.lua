@@ -18,6 +18,10 @@ require("diffview").setup({
 })
 
 require('gitsigns').setup({
+    diff_opts = {
+        vertical = true,      -- Force vertical split
+        split = 'rightbelow', -- Force the diff buffer to the RIGHT of your code
+    },
     signs = {
         add          = { text = '┃' },
         change       = { text = '┃' },

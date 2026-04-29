@@ -89,3 +89,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+-- Open splits in the more natural way, not the obnoxious Vim way
+-- (why does Vim even do it that way?)
+vim.api.nvim_create_autocmd("WinNew", {
+    callback = function()
+        vim.opt.splitright = true
+        vim.opt.splitbelow = true
+    end,
+})
+

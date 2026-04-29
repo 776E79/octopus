@@ -31,10 +31,6 @@ local border = "rounded"
 
 -- Borders for JetBrains-like feel
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-    vim.lsp.handlers.hover, { border = border }
-)
--- Apply border to LSP hover windows
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
     vim.lsp.handlers.hover, {
         border = border,
     }
@@ -65,7 +61,6 @@ require('blink.cmp').setup({
             winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
             'CursorLine:BlinkCmpMenuSelection,Search:None',
         },
-        documentation = {},
         documentation = {
             window = {
                 border = border,
@@ -138,18 +133,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         -- Panels
         vim.api.nvim_set_hl(0, "DarkPanel", { bg = panel_bg })
 
-        -- Telescope
-        vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = main_bg })
-        vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { bg = main_bg })
-        vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = main_bg })
-
         -- Indent guides
         vim.api.nvim_set_hl(0, "IblIndent", { fg = "#D1D9E0", nocombine = true })
         vim.api.nvim_set_hl(0, "IblScope", { fg = "#5E81AC", bold = true, nocombine = true })
-        require("ibl").setup_buffer(0, {
-            indent = { highlight = "IblIndent" },
-            scope = { highlight = "IblScope" },
-        })
 
         -- NVim tree
         vim.api.nvim_set_hl(0, "NvimTreeSpecialFile", { fg = "none", bg = "none", italic = false })
@@ -164,6 +150,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "VirtColumn", { fg = "#C29393", bg = main_bg, force = true })
         vim.api.nvim_set_hl(0, "ColorColumn", { bg = "none" })
 
+        -- Lsp
+        vim.api.nvim_set_hl(0, "LspReferenceText", { bg = "#DDE2E9", underline = false })
+        vim.api.nvim_set_hl(0, "LspReferenceRead", { bg = "#DDE2E9", underline = false })
+        vim.api.nvim_set_hl(0, "LspReferenceWrite", { bg = "#DDE2E9", underline = false })
+
         -- Telescope
         vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = main_bg })
         vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { bg = main_bg })
@@ -177,33 +168,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = "#FFFFFF", bg = "#5E81AC", bold = true })
         vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { fg = "#5E81AC", bg = main_bg })
         vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { fg = "#5E81AC", bg = main_bg })
-        vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = "#DDE2E9", bold = true })
-        vim.api.nvim_set_hl(0, "TelescopeMatching", { fg = "#5E81AC", bg = "NONE", bold = true })
-        vim.api.nvim_set_hl(0, "Search", { fg = "NONE", bg = "#DDE2E9" })
-        vim.api.nvim_set_hl(0, "IncSearch", { fg = "#FFFFFF", bg = "#5E81AC" })
         vim.api.nvim_set_hl(0, "TelescopePreviewMatch", { bg = "#DDE2E9" })
 
         -- Remove annoying underlies in search results
-        vim.api.nvim_set_hl(0, "TelescopeMatching", { 
-            fg = "#5E81AC", 
-            bg = "NONE", 
-            bold = true, 
-            underline = false, 
-            undercurl = false 
-        })
-        vim.api.nvim_set_hl(0, "Search", { 
-            fg = "NONE", 
-            bg = "#DDE2E9", 
-            underline = false 
-        })
-        vim.api.nvim_set_hl(0, "IncSearch", { 
-            fg = "#FFFFFF", 
-            bg = "#5E81AC", 
-            underline = false 
-        })
-        vim.api.nvim_set_hl(0, "LspReferenceText", { bg = "#DDE2E9", underline = false })
-        vim.api.nvim_set_hl(0, "LspReferenceRead", { bg = "#DDE2E9", underline = false })
-        vim.api.nvim_set_hl(0, "LspReferenceWrite", { bg = "#DDE2E9", underline = false })
         vim.api.nvim_set_hl(0, "TelescopeSelection", { 
             fg = "#5E81AC",
             bg = "#DDE2E9",
@@ -213,12 +180,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { 
             fg = "#5E81AC", 
             bg = "#DDE2E9"
-        })
-        vim.api.nvim_set_hl(0, "TelescopeMatching", { 
-            fg = "#5E81AC", 
-            bg = "NONE", 
-            bold = true, 
-            underline = false 
         })
         vim.api.nvim_set_hl(0, "Search", { 
             bg = "#DDE2E9", 

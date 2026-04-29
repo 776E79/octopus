@@ -78,17 +78,3 @@ vim.lsp.config('ruff', {
 })
 vim.lsp.enable('ruff')
 
--- Blink for autocompletion (fast and supports fuzzy completion)
-require('blink.cmp').setup({
-    keymap = {
-        ["<Tab>"]   = { "select_next", "fallback" },
-        ["<S-Tab>"] = { "select_prev", "fallback" },
-        ["<CR>"]    = { "accept", "fallback" },
-    },
-    completion = {
-        documentation = { auto_show = true },
-        list = { selection = { preselect = false } },
-    },
-    sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
-})
-

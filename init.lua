@@ -8,7 +8,11 @@ local is_headless = #vim.api.nvim_list_uis() == 0
 if not is_headless then
 
     -- Safely load configurations here
-    require('plugins_config')
+    require('lsp')
+    require('search')
+    require('files')
+    require('git')
+    require('ui')
 
     -- Load utilities that depend on Telescope/Plugins
     require('tab_utils')
@@ -22,6 +26,7 @@ if not is_headless then
     require('keymaps')
     require('autocommands')
     require('statline')
+    require('ui')
 else
     -- In headless mode, we only want the bare minimum keymaps
     -- so we don't trigger "module not found" errors.

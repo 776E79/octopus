@@ -10,6 +10,15 @@ function _G.toggle_tree()
 end
 vim.keymap.set("n", "<leader>e", _G.toggle_tree)
 
+-- Make sure we do not draw line numbers in terminal.
+autocmd("TermOpen", {
+    callback = function()
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
+        vim.opt_local.signcolumn = "no"
+    end,
+})
+
 -- End of file newline enforcement
 autocmd("BufWritePre", {
     callback = function()
@@ -71,6 +80,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
     -- 25% of window height
     vim.cmd("botright copen" .. math.floor((vim.o.lines * 0.25)))
     vim.cmd("vsplit | term")
+
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
 
     vim.cmd("wincmd t")
     vim.cmd("wincmd l")

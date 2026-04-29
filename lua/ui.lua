@@ -118,6 +118,29 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "Comment", { fg = "#3f7f5f", italic = false })
         vim.api.nvim_set_hl(0, "@comment", { fg = "#3f7f5f", italic = false })
 
+        -- Member variables (Eclipse uses a subtle orange/brown or blue depending on version)
+        vim.api.nvim_set_hl(0, "@variable.member", { fg = "#0000C0" }) -- Classic Blue
+        vim.api.nvim_set_hl(0, "@field", { fg = "#0000C0" })
+
+        -- Preprocessor directives (Eclipse uses a dark pink/maroon)
+        vim.api.nvim_set_hl(0, "PreProc", { fg = "#7F0055", bold = false })
+        vim.api.nvim_set_hl(0, "@keyword.directive", { fg = "#7F0055", bold = false })
+        vim.api.nvim_set_hl(0, "@keyword.directive.define", { fg = "#7F0055", bold = true })
+
+        -- Constants and Macros (Eclipse usually defaults to a dark blue/black)
+        vim.api.nvim_set_hl(0, "Constant", { fg = "#000000", italic = true })
+        vim.api.nvim_set_hl(0, "@constant", { fg = "#000000", italic = true })
+
+        -- Functions (Eclipse is often plain black for standard calls)
+        vim.api.nvim_set_hl(0, "Function", { fg = "#000000" })
+        vim.api.nvim_set_hl(0, "@function", { fg = "#000000" })
+
+        -- Parameters (Eclipse uses a very distinct orange/brown)
+        vim.api.nvim_set_hl(0, "@parameter", { fg = "#6A3E3E" })
+
+        -- Numbers (Black or Dark Blue)
+        vim.api.nvim_set_hl(0, "Number", { fg = "#000000" })
+
         -- Javadoc Style (Light blue/grey)
         vim.api.nvim_set_hl(0, "@comment.documentation", { fg = "#3f5fbf" })
 

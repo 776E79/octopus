@@ -88,4 +88,5 @@ vim.keymap.set('n', '<leader>Gd', ':DiffviewOpen HEAD -- %<cr>', { desc = 'Diff 
 vim.keymap.set('n', '<leader>ht', ':split | term<CR>', { desc = 'Horizontal terminal' })
 vim.keymap.set('n', '<leader>vt', ':vsplit | term<CR>', { desc = 'Vertical terminal' })
 vim.keymap.set('n', '<leader>Tt', ':tabnew | term<CR>', { desc = 'Tab terminal' })
+vim.keymap.set('t', '<Esc><Esc>', [[<C-\><C-n>]], { desc = 'Escape terminal to previous window' })
 

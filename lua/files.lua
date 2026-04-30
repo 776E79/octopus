@@ -3,14 +3,17 @@ require('nvim-tree').setup({
     view = { 
         width = 40, 
         side = 'left',
-        signcolumn = "no",
+        signcolumn = "yes",
     },
     update_focused_file = { enable = true },
     git = { ignore = false },
+    filters = {
+        custom = { "^.git$" },
+    },
     renderer = {
         special_files = {},
         highlight_opened_files = "all",
-        root_folder_label = false,
+        root_folder_label = ":t",
         indent_markers = {
             enable = true,
             inline_arrows = true,
@@ -31,7 +34,6 @@ require('nvim-tree').setup({
                 git = true,
             },
             glyphs = {
-                -- Your Nerd Font "Indicators"
                 folder = {
                     arrow_closed = "", -- Chevron Right
                     arrow_open = "",   -- Chevron Down

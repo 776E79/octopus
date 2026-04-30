@@ -13,7 +13,7 @@ The following Lua modules are loaded for keymap utilities:
 KEYMAPS BY SECTION                                           *octopus-sections*
 
 ------------------------------------------------------------------------------
- *octopus-*
+FILE OPERATIONS *octopus-file-operations*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -25,7 +25,7 @@ n    | <leader>q       | Quit all
 n    | <leader>QQ      | Force quit all
 
 ------------------------------------------------------------------------------
- *octopus-*
+SPLITS AND WINDOWING *octopus-splits-and-windowing*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -40,7 +40,7 @@ n    | <leader>wj      | Quickly jump to window below
 n    | <leader>wk      | Quickly jump to window above
 
 ------------------------------------------------------------------------------
- *octopus-*
+RESIZING *octopus-resizing*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -51,7 +51,7 @@ n    | <leader>v-      | Decrease height
 n    | <leader>w=      | Equally size windows
 
 ------------------------------------------------------------------------------
- *octopus-*
+BUFFERS *octopus-buffers*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -63,7 +63,7 @@ n    | <leader>bq      | Close window/buffer
 n    | <leader>n       | New empty buffer
 
 ------------------------------------------------------------------------------
- *octopus-*
+TABS *octopus-tabs*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -75,7 +75,7 @@ n    | <leader>tl      | List/Switch tabs
 n    | <leader>tr      | Rename tab
 
 ------------------------------------------------------------------------------
- *octopus-*
+TELESCOPE & SEARCH TOOLS *octopus-telescope-&-search-tools*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -89,7 +89,7 @@ n    | <leader>sr      | Search and Replace
 n    | <leader>m       | Man pages
 
 ------------------------------------------------------------------------------
- *octopus-*
+LSP & DIAGNOSTICS *octopus-lsp-&-diagnostics*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -109,7 +109,7 @@ n    | <leader>qp      | Jump to prev fix
 n    | <leader>mk      | Run make and display output in quickfix window
 
 ------------------------------------------------------------------------------
- *octopus-*
+SEQUENTIAL DIFF *octopus-sequential-diff*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -117,7 +117,7 @@ n    | <leader>db      | Diff buffers
 n    | <leader>df      | Diff files
 
 ------------------------------------------------------------------------------
- *octopus-*
+NEOGIT *octopus-neogit*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
@@ -130,7 +130,7 @@ n    | <leader>Gl      | Git log
 n    | <leader>Gd      | Diff current buffer with HEAD
 
 ------------------------------------------------------------------------------
- *octopus-*
+TERMINAL CONTROL *octopus-terminal-control*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------

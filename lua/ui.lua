@@ -52,3 +52,15 @@ require("ibl").setup {
     },
 }
 
+vim.diagnostic.config({
+    signs = true,
+    update_in_insert = false,
+    severity_sort = true,
+    float = {
+        border = 'rounded',
+        source = "if_many",
+        header = "",
+        prefix = "",
+    },
+})
+

@@ -70,6 +70,7 @@ vim.keymap.set('n', '<leader>qk', '<cmd>cclose<cr>', { desc = 'Kill the quickfix
 vim.keymap.set('n', '<leader>qn', '<cmd>cnext<cr>', { desc = 'Jump to next fix' })
 vim.keymap.set('n', '<leader>qp', '<cmd>cprev<cr>', { desc = 'Jump to prev fix' })
 vim.keymap.set('n', '<leader>mk', '<cmd>silent make | redraw!<cr>', { desc = 'Run make and display output in quickfix window' })
+vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, { desc = 'Show signature help' })
 
 -- Sequential Diff
 vim.keymap.set('n', '<leader>db', function() t_diff.diff_sequentially("buffers") end, { desc = 'Diff buffers' })

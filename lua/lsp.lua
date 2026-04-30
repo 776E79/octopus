@@ -35,11 +35,6 @@ vim.lsp.config('bashls', {
 })
 vim.lsp.enable('bashls')
 
--- Add other servers and configurations here as needed.
--- requirements:
---  - pyright or
---  python-lsp-service
--- 1. Configuration for Pyright (Type Checking & Definitions)
 vim.lsp.config('pyright', {
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
@@ -85,19 +80,31 @@ require('blink.cmp').setup({
     },
     completion = {
         menu = {
-            -- This forces the menu to use the FloatBorder highlight group
+            border = 'rounded',
             winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
             'CursorLine:BlinkCmpMenuSelection,Search:None',
         },
-    },
-    documentation = {
-        window = {
-            winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
-            'CursorLine:BlinkCmpDocCursorLine,Search:None',
-            auto_show = true ,
+        documentation = {
+            auto_show = true,
+            window = {
+                border = 'rounded',
+                winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
+                'CursorLine:BlinkCmpDocCursorLine,Search:None',
+            },
         },
-        sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
     },
-    list = { selection = { preselect = false } },
+    sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
+    list = { 
+        selection = { preselect = false } 
+    },
+    signature = { 
+        enabled = true,
+        window = {
+            border = 'rounded',
+            winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,Search:None',
+        },
+    },
 })
 

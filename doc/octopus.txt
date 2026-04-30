@@ -107,6 +107,7 @@ n    | <leader>qk      | Kill the quickfix window
 n    | <leader>qn      | Jump to next fix
 n    | <leader>qp      | Jump to prev fix
 n    | <leader>mk      | Run make and display output in quickfix window
+i    | <C-k>           | Show signature help
 
 ------------------------------------------------------------------------------
 SEQUENTIAL DIFF *octopus-sequential-diff*

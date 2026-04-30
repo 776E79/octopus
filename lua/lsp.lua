@@ -78,3 +78,27 @@ vim.lsp.config('ruff', {
 })
 vim.lsp.enable('ruff')
 
+require('blink.cmp').setup({
+    keymap = {
+        ["<Tab>"]   = { "select_next", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "fallback" },
+        ["<CR>"]    = { "accept", "fallback" },
+    },
+    completion = {
+        menu = {
+            -- This forces the menu to use the FloatBorder highlight group
+            winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
+            'CursorLine:BlinkCmpMenuSelection,Search:None',
+        },
+    },
+    documentation = {
+        window = {
+            winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
+            'CursorLine:BlinkCmpDocCursorLine,Search:None',
+            auto_show = true ,
+        },
+        sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
+    },
+    list = { selection = { preselect = false } },
+})
+

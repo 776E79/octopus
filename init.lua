@@ -6,7 +6,6 @@ local is_headless = #vim.api.nvim_list_uis() == 0
 
 -- ONLY load plugin-dependent modules if we have a UI (not installing)
 if not is_headless then
-
     -- Safely load configurations here
     require('lsp')
     require('search')

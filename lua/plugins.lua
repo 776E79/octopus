@@ -29,8 +29,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'lukas-reineke/virt-column.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug '776E79/jb.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'projekt0n/github-nvim-theme'
 
 -- Unfortunately built in server in nvim 0.12+ is still not powerful enough
 -- to replace blink.

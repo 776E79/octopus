@@ -8,7 +8,6 @@ The following Lua modules are loaded for keymap utilities:
   - palette
   - t_diff
   - buffer_utils
-  - session_utils
 
 ==============================================================================
 KEYMAPS BY SECTION                                           *octopus-sections*
@@ -106,7 +105,7 @@ v    | <leader>/       | Toggle block comment
 n    | <leader>qf      | Focus on quickfix window
 n    | <leader>qk      | Kill the quickfix window
 n    | <leader>qn      | Jump to next fix
-n    | <leader>qn      | Jump to prev fix
+n    | <leader>qp      | Jump to prev fix
 n    | <leader>mk      | Run make and display output in quickfix window
 
 ------------------------------------------------------------------------------
@@ -138,16 +137,6 @@ Mode | Key             | Description
 n    | <leader>ht      | Horizontal terminal
 n    | <leader>vt      | Vertical terminal
 n    | <leader>Tt      | Tab terminal
-t    | <Esc><Esc>      | Escape terminal to previous window
-n    | <leader>t       | Jump to terminal if open, or create one if not
-
-------------------------------------------------------------------------------
-SESSION CONTROL (PRESERVE/LOAD) *octopus-session-control-(preserve/load)*
-
-Mode | Key             | Description
----- | --------------- | -------------------------------------------------------
-n    | <leader>SS      | Save Session
-n    | <leader>SL      | Load Session
 
 ==============================================================================
  vim:tw=78:ts=8:ft=help:norl:

@@ -31,7 +31,6 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'tpope/vim-dispatch'
 
 -- Unfortunately built in server in nvim 0.12+ is still not powerful enough
 -- to replace blink.

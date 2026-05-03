@@ -59,6 +59,14 @@ vim.lsp.config('ruff', {
 })
 vim.lsp.enable('ruff')
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "cpp", "python", "bash", "lua" },
+    callback = function()
+        vim.opt_local.foldmethod = "syntax"
+        vim.opt_local.foldlevel = 99
+    end,
+})
+
 require('blink.cmp').setup({
     keymap = {
         ["<Tab>"]   = { "select_next", "fallback" },

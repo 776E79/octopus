@@ -1,6 +1,14 @@
--- clangd for c/c++
--- requirements:
---  - clangd
+require("mason").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "pyright",
+        "ruff",
+        "bashls",
+        "clangd",
+    },
+})
+
+-- clangd for c/c++ requires clangd
 vim.lsp.config('clangd', {
     cmd = { 
         'clangd', 
@@ -12,16 +20,14 @@ vim.lsp.config('clangd', {
 })
 vim.lsp.enable('clangd')
 
--- bash/sh
--- requirements
---  - bash-language-server (core)
---  - shellcheck (linting)
+-- bash/sh requires bash-language-server and shellcheck
 vim.lsp.config('bashls', {
     cmd = { 'bash-language-server', 'start' },
     filetypes = { 'bash', 'sh' }
 })
 vim.lsp.enable('bashls')
 
+-- pyright requires pyright-langserver and ruff
 vim.lsp.config('pyright', {
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
@@ -49,6 +55,7 @@ vim.lsp.config('pyright', {
 })
 vim.lsp.enable('pyright')
 
+-- requires ruff
 vim.lsp.config('ruff', {
     cmd = { "ruff", "server" },
     filetypes = { "python" },
@@ -95,9 +102,6 @@ require('blink.cmp').setup({
     },
     signature = {
         enabled = true,
-        trigger = {
-            show_on_insert_or_trigger_character = true,
-        },
         window = {
             border = 'rounded',
             winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
@@ -105,4 +109,15 @@ require('blink.cmp').setup({
         },
     },
 })
+
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+    opts = opts or {}
+    opts.border = opts.border or 'rounded'
+    opts.winhighlight = opts.winhighlight or 
+    'Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:BlinkCmpDocCursorLine,Search:None'
+
+    return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
 

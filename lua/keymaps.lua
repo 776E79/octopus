@@ -19,6 +19,7 @@ vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { desc = 'Clear search highlight
 vim.keymap.set('n', '<leader>q', ':qa<CR>', { desc = 'Quit all' })
 vim.keymap.set('n', '<leader>QQ', ':qa!<CR>', { desc = 'Force quit all' })
 vim.keymap.set('n', '<leader>e', toggle_tree, { desc = 'Toggle file explorer focus' })
+vim.keymap.set('n', '<leader>E', ':NvimTreeToggle<CR>', { desc = 'Toggle file' })
 
 -- Splits and windowing
 vim.keymap.set('n', '<leader>vs', ':vsplit<CR>', { desc = 'Vertical split' })

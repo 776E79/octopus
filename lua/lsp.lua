@@ -86,6 +86,8 @@ require('blink.cmp').setup({
             border = 'rounded',
             winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,'..
             'CursorLine:BlinkCmpMenuSelection,Search:None',
+            selection = { preselect = false, auto_insert = false, },
+            auto_show = true,
         },
         documentation = {
             auto_show = true,

@@ -38,3 +38,15 @@ vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpo
 -- Set up system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Force TrueColor and prevent SSH detection lag
+vim.opt.termguicolors = true
+
+-- This autocommand forces the colorscheme to re-apply 
+-- once the terminal UI is fully attached over the network
+vim.api.nvim_create_autocmd("UIEnter", {
+    callback = function()
+        vim.o.background = "light"
+        vim.cmd.colorscheme('github_light_default')
+    end
+})
+

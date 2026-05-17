@@ -46,7 +46,7 @@ vim.opt.termguicolors = true
 vim.api.nvim_create_autocmd("UIEnter", {
     callback = function()
         vim.o.background = "dark"
-        vim.cmd.colorscheme('github_dark_dimmed')
+        vim.cmd.colorscheme('github_light_default')
     end
 })
 

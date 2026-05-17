@@ -45,8 +45,8 @@ vim.opt.termguicolors = true
 -- once the terminal UI is fully attached over the network
 vim.api.nvim_create_autocmd("UIEnter", {
     callback = function()
-        vim.o.background = "light"
-        vim.cmd.colorscheme('github_light_default')
+        vim.o.background = "dark"
+        vim.cmd.colorscheme('github_dark_dimmed')
     end
 })
 
